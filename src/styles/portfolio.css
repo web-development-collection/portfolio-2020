@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Helvetica", sans-serif;
+    box-sizing: border-box;
+}
+
+.fill-screen {
+    min-height: 100vh;
+    height: 100%;
+}
+
+.wrapper {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.v-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.app > :nth-child(even) {
+    background-color: #f3f3f3 !important;
+}
+
+.app > :nth-child(odd) {
+    background-color: #ffffff !important;
+}
+
+
+
+/* Header and introduction */
+header {
+    background-color: #ffffff;
+}
+
+header div.introduction {
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header div.introduction h1 {
+    width: 40%;
+    margin: 0 auto;
+
+    color: #111111;
+
+    /*text-align: center;*/
+}
+
+header div.introduction h1 span.name {
+    color: #2e32ec;
+}
+
+header div.introduction h1 span.secondary {
+    color: #acb6ba;
+    font-weight: 400;
+}
+
+
+
+/* Skills and projects */
+section.skills {
+    background-color: #f1f1f1;
+}
+
+section.skills > div {
+    margin: 16vh 0;
+}
+
+
+
+section.skills div.list-overview {
+    margin-top: 24px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+}
+
+section.skills div.list-overview div.item {
+    background-color: #f3f3f3;
+    border-radius: 6px;
+
+    padding: 14px 24px;
+    cursor: default;
+
+    transition: .25s ease;
+}
+section.skills div.list-overview div.item:hover {
+    transform: scale(1.05);
+    background-color: #eeeeee;
+}
+
+section.skills div.list-overview div.item > :nth-child(1) {
+    color: #2e32ec;
+    font-size: 20px;
+
+    margin-right: 16px;
+}
+
+section.skills div.list-overview div.item > :nth-child(2) {
+    font-size: 18px;
+    font-weight: 600;
+
+    position: relative;
+    top: -1px;
+}
+
+
+
+
+
+
+section.about {
+    background-color: #e3e3e3;
+}
+
+section.contact {
+    background-color: #fff;
+}
+
+footer {
+    background-color: #e3e3e3;
+}
+
+
+
+form {
+    padding: 48px 32px;
+    background-color: #ffffff;
+    border-radius: 10px;
+
+    margin-top: 16px;
+}
+
+form label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #7c7c7c;
+}
+
+form input[type="text"], form input[type="email"], form input[type="submit"], form textarea {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 16px 20px;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #353535;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    background-color: #f3f3f3;
+
+    width: 100%;
+    display: block;
+
+    margin-bottom: 16px;
+    margin-top: 4px;
+
+    resize: none;
+    transition: .2s ease;
+}
+
+form input[type="text"]:hover, form input[type="email"]:hover, form textarea:hover {
+    background-color: #eeeeee;
+}
+
+form input[type="submit"] {
+    background-color: #2e32ec;
+    color: white;
+    cursor: pointer;
+
+    transition: .15s ease;
+}
+
+form input[type="submit"]:hover {
+    transform: scale(1.02);
+    background-color: #292dd7;
+}
+
+form .same-line {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+}
+
+form ::placeholder {
+    color: #cbcbcb;
+}
+
+
+
+@media only screen and (max-width: 1450px) {
+    section.skills div.list-overview {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .wrapper {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+    section.skills div.list-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wrapper {
+        width: 80%;
+    }
+}
