@@ -1,5 +1,6 @@
 # development
 .idea
+.eslintcache
 
 # dependencies
 /node_modules
